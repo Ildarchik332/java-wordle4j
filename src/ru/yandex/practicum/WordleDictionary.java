@@ -10,6 +10,7 @@ import java.util.List;
  */
 public class WordleDictionary {
 
+    public static final int WORD_LENGTH = 5;
     private final List<String> words;
 
     public WordleDictionary(List<String> words) {
@@ -39,7 +40,7 @@ public class WordleDictionary {
      * ожидает нормализованное слово (нижний регистр + ё -> е)
      */
     public static boolean hasValidFormat(String word) {
-        if (word == null || word.length() != 5) {
+        if (word == null || word.length() != WORD_LENGTH) {
             return false;
         }
         for (int i = 0; i < word.length(); i++) {
